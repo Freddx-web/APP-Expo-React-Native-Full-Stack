@@ -33,10 +33,10 @@
 
 
 
-  <h3 align="center">Api Node React</h3>
+  <h3 align="center">APP Full Stack</h3>
 
   <p align="center">
-    Simple javascript project with Node js and React js
+    Complete Full Stack application examples
     <br />
     <!--
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
