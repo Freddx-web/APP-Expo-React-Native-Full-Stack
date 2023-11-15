@@ -137,7 +137,7 @@ This is an example of how to list things you need to use the software and how to
   ```
 
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [main/client](https://github.com/Freddx-web/APP-Expo-React-Native-Full-Stack/tree/main/client)
 2. Clone the repo
    ```sh
      git clone https://github.com/Freddx-web/APP-Expo-React-Native-Full-Stack.git
