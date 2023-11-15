@@ -1,0 +1,34 @@
+{
+  "name": "restapi-nodejs-express-mysql-master",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "babel-node": "babel-node --presets=@babel/preset-env",
+    "dev": "nodemon --exec npm run babel-node src/index.js",
+    "test": "nodemon --exec npm run babel-node src/_test_.js",
+    "mongo": "nodemon --exec npm run babel-node src/database/connect.js"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.5",
+    "morgan": "^1.10.0",
+    "promise-mysql": "^5.2.0",
+    "zod": "^3.22.2"
+  },
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.3",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.3",
+    "nodemon": "^2.0.22"
+  }
+}
