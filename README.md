@@ -128,7 +128,7 @@ To get a local copy up and running follow these simple example steps.
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-## Prerequisites
+## Prerequisites to CLIEN [main/client](https://github.com/Freddx-web/APP-Expo-React-Native-Full-Stack/tree/main/client)
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
@@ -138,18 +138,21 @@ This is an example of how to list things you need to use the software and how to
 
 
 1. Get a free API Key at [main/client](https://github.com/Freddx-web/APP-Expo-React-Native-Full-Stack/tree/main/client)
-2. Clone the repo
+2. Import Dependecies in file `client`
    ```sh
-     git clone https://github.com/Freddx-web/APP-Expo-React-Native-Full-Stack.git
-
+     npx expo install @expo/webpack-config@^18.1.2 @react-native-async-storage/async-storage@1.17.11 @react-native-community/masked-view@^0.1.11 @react-native-material/core@^1.3.7 @react-navigation/material-top-tabs@^6.6.3 @react-navigation/native@^6.1.7 @react-navigation/stack@^6.3.17 @rneui/themed@^4.0.0-rc.8 
    ```
-3. Install NPM packages
+3. Install NPM packages Expo Go
    ```sh
-   npm install
+   npx expo install axios@^1.4.0 expo@~48.0.18 expo-linear-gradient@~12.1.2 expo-status-bar@~1.4.4 react@^18.2.0 react-dom@^18.2.0 react-native@0.71.14 
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Install NPM packages `version` react native
+   ```sh
+   npx expo install react-native-alert-notification@^0.3.5 react-native-divider@^1.0.3 react-native-elements@^3.4.3 react-native-gesture-handler@~2.9.0 react-native-loading-spinner-overlay@^3.0.1 react-native-pager-view@6.1.2 react-native-paper@^5.9.1 react-native-rapi-ui@^0.2.1 react-native-reanimated@~2.14.4 react-native-responsive-screen@^1.4.2 react-native-safe-area-context@4.5.0 react-native-screens@~3.20.0 react-native-status-bar-height@^2.6.0 react-native-tab-view@^3.5.2 react-native-web@^0.18.12 
+   ```
+5. Install NPM packages `version DEV` react native
+   ```sh
+   npx expo install @babel/core@^7.22.9 babel-eslint@^10.1.0 eslint@^8.46.0 eslint-config-airbnb@^19.0.4 eslint-config-prettier@^8.9.0 eslint-plugin-import@^2.28.0 eslint-plugin-jsx-a11y@^6.7.1 eslint-plugin-prettier@^5.0.0 eslint-plugin-react@7.33.1 prettier@^3.0.0 
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
