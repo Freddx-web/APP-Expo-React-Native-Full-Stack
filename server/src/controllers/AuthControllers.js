@@ -18,7 +18,7 @@ const register = async (req, res, next) => {
     const { username, email, password } = req.body;
     //Validation
     if (username === undefined || email === undefined || password === undefined) {
-      return res.status(400).json({ message: "Bad Request. Please fill all field." }); 
+      res.status(401).json({ message: "Bad Request. Please fill all field." }); 
     } 
     else { 
 
@@ -26,7 +26,7 @@ const register = async (req, res, next) => {
       const userFound = await User.findOne({ email });
 
       if (userFound)
-        return res.status(400).json({
+        return res.status(401).json({
         message: ["The email is already in use"],
       });
 
@@ -48,7 +48,7 @@ const register = async (req, res, next) => {
         id: userSaved._id,
       });
 
-      // Cookies
+      // Cookies token
       res.cookie("token", token, {
         httpOnly: process.env.NODE_ENV !== "development",
         secure: true,
@@ -56,7 +56,7 @@ const register = async (req, res, next) => {
       });
 
       // Resquest
-      return res.status(200).json({ 
+      res.status(201).json({ 
         message: "POST - Register",
         username, email, password, userSaved, token
       });
@@ -75,7 +75,7 @@ const login = async (req, res, next) => {
     const { email, password } = req.body;
 
     if (email === undefined || password === undefined) {
-      res.status(400).json({ message: "Bad Request. Please fill all field." }); 
+      res.status(401).json({ message: "Bad Request. Please fill all field." }); 
     } 
 
     else { 
@@ -83,14 +83,14 @@ const login = async (req, res, next) => {
       const userFound = await User.findOne({ email })
 
       if (!userFound)
-      return res.status(400).json({
+      return res.status(401).json({
         message: ["The email does not exist"],
       });
 
       // Compare password validation
       const isMatch = await bcrypt.compare(password, userFound.password);
       if (!isMatch) {
-        return res.status(400).json({
+        return res.status(401).json({
           message: ["The password is incorrect"],
         });
       }
@@ -101,6 +101,8 @@ const login = async (req, res, next) => {
         username: userFound.username,
       });
 
+      
+
       // Cookies
       res.cookie("token", token, {
         httpOnly: process.env.NODE_ENV !== "development",
@@ -110,9 +112,7 @@ const login = async (req, res, next) => {
       
       // Resquest
       res.status(201).json({
-        id: userFound._id,
-        username: userFound.username,
-        email: userFound.email,
+        message: ["WELCOME BACK"],
       });
 
     }
@@ -152,8 +152,8 @@ const logout = async (req, res) => {
 
 // Export
 export const methods = { 
-    register,   //Post
-    login,      //Post
-    verifyToken,// Get
-    logout      
+  register,   //Post
+  login,      //Post
+  verifyToken,// Get
+  logout      
 }

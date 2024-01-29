@@ -2,9 +2,9 @@
 /**
  * Index
  */
-
-import app from './app';
 import { connectDB } from './database/connect.js'
+import app from './app';
+
 
 // Start App
 async function main() {

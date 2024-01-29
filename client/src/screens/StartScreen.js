@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { StyleSheet, Text, View, Animated } from "react-native";
+import { StyleSheet, Text, View, Animated,
+SafeAreaView, ScrollView, StatusBar} from "react-native";
 //import LinearGradient from 'react-native-linear-gradient';
 
 import Background from '../components/Background'
@@ -7,33 +8,33 @@ import Logo from '../components/Logo'
 import Header from '../components/Header'
 import Button from '../components/Button'
 import Paragraph from '../components/Paragraph'
+import FadeInView from '../components/FadeInView'
 
 export default function StartScreen({ navigation }) {
-  /*
-  const [fadeIn, setFadeIn] = useState(new Animated.Value(0));
-  const [fadeInSlow, setFadeInSlow] = useState(new Animated.Value(0));
-
-  React.useEffect(() => {
-
-    Animated.timing(fadeIn,{
-      toValue: 1,
-      duration: 1000
-    }).start();
-    
-    Animated.timing(fadeInSlow,{
-      toValue: 1,
-      duration: 2000
-    }).start();
-  }) */
 
   return (
+
+
+
     <Background>
+
+
+
+
+
+
+
+      <FadeInView>
       <Logo />
       <Header>DalePlay</Header>
       
+      
+  
       <Paragraph>
         Bienvenido
       </Paragraph>
+      
+      </FadeInView>
       
       <Button
         mode="contained"
@@ -43,23 +44,31 @@ export default function StartScreen({ navigation }) {
       </Button>
 
       <Button
-        mode="outlined"
+        mode="contained"
         onPress={() => navigation.navigate('RegisterScreen')}
       >
         Registrarse
       </Button>
 
       <Button
-        mode="contained"
-        onPress={() => navigation.navigate('HelloWorldApp')}
+        mode="outlined"
+        onPress={() => navigation.navigate('Dashboard')}
       >
-        HelloWorldApp
+        Dashboard
       </Button>
+      
+    
     </Background>
+
+
+
   )
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   linearGradient: {
     flex: 1,
     paddingLeft: 15,

@@ -24,8 +24,6 @@
   </a>
   
 
-
-
   <h3 align="center">Api Node React</h3>
 
   <p align="center">
@@ -42,8 +40,6 @@
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>-->
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>

@@ -8,10 +8,8 @@ import {
   LoginScreen,
   RegisterScreen,
   ResetPasswordScreen,
-  Dashboard, 
+  Dashboard,
 } from './src/screens'
-
-
 
 const Stack = createStackNavigator()
 
@@ -33,8 +31,6 @@ export default function App() {
             name="ResetPasswordScreen"
             component={ResetPasswordScreen}
           />
-
-
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

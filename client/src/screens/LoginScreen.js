@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
 import { TouchableOpacity, StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-paper'
-import Background from '../components/Background'
-import Logo from '../components/Logo'
-import Header from '../components/Header'
-import Button from '../components/Button'
-import TextInput from '../components/TextInput'
-import BackButton from '../components/BackButton'
-import { theme } from '../core/theme'
-import { emailValidator } from '../helpers/emailValidator'
-import { passwordValidator } from '../helpers/passwordValidator'
+
+import Background from '../components/Background.js'
+import Logo from '../components/Logo.js'
+import Header from '../components/Header.js'
+import Button from '../components/Button.js'
+import TextInput from '../components/TextInput.js'
+import BackButton from '../components/BackButton.js'
+import Paragraph from '../components/Paragraph'
+
+import { theme } from '../core/theme.js'
+import { emailValidator } from '../helpers/emailValidator.js'
+import { passwordValidator } from '../helpers/passwordValidator.js'
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' })
@@ -66,7 +69,7 @@ export default function LoginScreen({ navigation }) {
         Inciar Session
       </Button>
       <View style={styles.row}>
-        <Text>No tienes una cuenta.? </Text>
+        <Paragraph>No tienes una cuenta.? </Paragraph>
         <TouchableOpacity onPress={() => navigation.replace('RegisterScreen')}>
           <Text style={styles.link}>Sign up</Text>
         </TouchableOpacity>

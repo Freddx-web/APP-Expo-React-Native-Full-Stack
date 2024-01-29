@@ -18,7 +18,6 @@ export default function ResetPasswordScreen({ navigation }) {
     }
     navigation.navigate('LoginScreen')
   }
-
   return (
     <Background>
       <BackButton goBack={navigation.goBack} />
