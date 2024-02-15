@@ -3,7 +3,7 @@ import { View,  StyleSheet, Image, Text } from "react-native";
 import { Avatar, Card } from 'react-native-paper';
 
 //style={styles.textSymbol}
-import TitleCoin from './CoinTitle.js';
+import TitleCoin from './CoinTitle';
 
 const CoinItem = ({ coin }) => (
  <View style={styles.containerItem}>
@@ -16,7 +16,7 @@ const CoinItem = ({ coin }) => (
       </View>
     </View>
     <View style={styles.coinName}>
-      <Text style={styles.textPrice}>${coin.current_price}</Text>
+      <Text style={styles.textPrice}> $ {coin.current_price}</Text>
       <Text
         style={[
           styles.pricePercentage,
@@ -25,11 +25,13 @@ const CoinItem = ({ coin }) => (
             : styles.priceDown,
         ]}
       >
-        {coin.price_change_percentage_24h.toFixed(2)}%
+        - - {coin.price_change_percentage_24h.toFixed(2)} %
         {"\n"}
         {"\n"}
-
       </Text>
+    </View>
+    <View style={styles.coinName}>
+      
     </View>
   </View>
 );

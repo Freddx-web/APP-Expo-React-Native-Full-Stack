@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   AppBar,
   IconButton,
   Button,
-  Avatar,
+  Avatar, 
 } from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
-import { Menu } from 'react-native-paper';
 
 const DrawerView = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -19,8 +18,7 @@ const DrawerView = () => {
           icon={props => <Icon name="folder" {...props} />}
           {...props}
         />
-        
-
+      
       )}
       trailing={props =>
         loggedIn ? (
@@ -40,7 +38,8 @@ const DrawerView = () => {
           />
         )
       }
-    />
+    >
+    </AppBar>
   );
 };
 

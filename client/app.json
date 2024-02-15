@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "my-app-test",
-    "slug": "my-app-test",
+    "name": "app-typescript",
+    "slug": "app-typescript",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

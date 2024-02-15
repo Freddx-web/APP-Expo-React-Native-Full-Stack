@@ -10,6 +10,7 @@ import Header from '../components/Header'
 import Button from '../components/Button'
 import TextInput from '../components/TextInput'
 import BackButton from '../components/BackButton'
+import Paragraph from '../components/Paragraph'
 import { theme } from '../core/theme'
 // Helpers
 import { emailValidator } from '../helpers/emailValidator'
@@ -49,34 +50,20 @@ export default function RegisterScreen({ navigation }) {
 
     } else {
 
-      const FlatListSeparator = () => {
-        navigation.reset({
-          index: 0,
-          routes: [{ username: 'Dashboard' }],
+      axios
+        .post('http://127.0.0.1:4000/api/app', {
+          username: username.value,
+          email: email.value,
+          password: password.value
         })
-    }
-    
-
-
-    setFromFetch(false);
-    setLoading(true);
-    
-    await axios.get("https://jsonplaceholder.typicode.com/users")
-        .then(response => {
-           // console.log('getting data from axios', response.data);
-            setTimeout(() => {
-                setLoading(false);
-                setAxiosData(response.data);
-              
-            }, 2000)
+        .then(function (response) {
+          // handle success
+          alert(JSON.stringify(response.data));
         })
-        .catch(error => {
-            console.log(error);
+        .catch(function (error) {
+          // handle error
+          alert(error.message);
         });
-
-
-
-
 
       }
      /*
@@ -85,25 +72,7 @@ export default function RegisterScreen({ navigation }) {
       routes: [{ username: 'Dashboard' }],
     })*/
 
-    
   }
-
-
-const renderItem = (data) => {
-    return (
-        <TouchableOpacity style={styles.list}>
-            <Text style={styles.lightText}>{data.item.name}</Text>
-            <Text style={styles.lightText}>{data.item.email}</Text>
-            <Text style={styles.lightText}>{data.item.company.name}</Text>
-        </TouchableOpacity>
-    )
-
-}
-
-
-
-const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
-
 
   return (
     <Background>
@@ -111,28 +80,6 @@ const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
       <Logo />
       <Header>Crear cuenta</Header>
       {/***************************/}
-       
-      
-      {fromFetch ?
-                <Text>Hello 1</Text>
-                : <Text></Text>
-            }
-            {loading &&
-  <View style={styles.loader}>
-      <ActivityIndicator />
-      <Text style={{fontSize:16,color:'red'}}>Loading Data...</Text>
-  </View>
-}
-
-
-
-
-
-
-
-      
-      {/***************************/}
-
 
       <TextInput
         label="Nombre"
@@ -171,7 +118,7 @@ const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
         Registrase
       </Button>
       <View style={styles.row}>
-        <Text>Tiene una cuenta? </Text>
+        <Paragraph>Tiene una cuenta? </Paragraph>
         <TouchableOpacity onPress={() => navigation.replace('LoginScreen')}>
           <Text style={styles.link}>Iniciar Session</Text>
         </TouchableOpacity>

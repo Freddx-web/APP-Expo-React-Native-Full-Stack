@@ -9,27 +9,18 @@ import Header from '../components/Header'
 import Button from '../components/Button'
 import Paragraph from '../components/Paragraph'
 import FadeInView from '../components/FadeInView'
+import Footer from '../components/FooterView'
 
 export default function StartScreen({ navigation }) {
 
   return (
 
-
-
     <Background>
-
-
-
-
-
-
 
       <FadeInView>
       <Logo />
       <Header>DalePlay</Header>
       
-      
-  
       <Paragraph>
         Bienvenido
       </Paragraph>
@@ -56,31 +47,9 @@ export default function StartScreen({ navigation }) {
       >
         Dashboard
       </Button>
-      
-    
+      <Footer>
+        ©2024 DalePay
+      </Footer>
     </Background>
-
-
-
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  linearGradient: {
-    flex: 1,
-    paddingLeft: 15,
-    paddingRight: 15,
-    borderRadius: 5
-  },
-  buttonText: {
-    fontSize: 18,
-    fontFamily: 'Gill Sans',
-    textAlign: 'center',
-    margin: 10,
-    color: '#ffffff',
-    backgroundColor: 'transparent',
-  },
-});

@@ -8,8 +8,9 @@ export default function Background({ children }) {
     
     <LinearGradient
       // Background Linear Gradient 1
-      // colors={['#fff','#fff','#fff','#fff','#00ff6887', '#2196f3']} 
-      colors={['#040a23', '#191b27', '#191b27', '#2b323b', '#3c586d', '#05af4a91']} 
+      // colors={['#00ff6821','#00ff6821','#00ff6821','#00ff6845','#00ff6887', '#2196f3']} LigtMode
+      // colors={['#040a23', '#191b27', '#191b27', '#2b323b', '#3c586d', '#05af4a91']}  DarkMode
+      colors={['#000', '#191b27', '#191b27', '#2b323b', '#3c426d', '#05af4a91']}
       style={styles.background}
     >
       <KeyboardAvoidingView style={styles.container} behavior="padding">

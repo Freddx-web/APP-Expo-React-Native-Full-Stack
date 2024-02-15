@@ -2,17 +2,22 @@ import React, { useState } from 'react'
 import { TouchableOpacity, StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-paper'
 
-import Background from '../components/Background.js'
-import Logo from '../components/Logo.js'
-import Header from '../components/Header.js'
-import Button from '../components/Button.js'
-import TextInput from '../components/TextInput.js'
-import BackButton from '../components/BackButton.js'
+// Components
+import Background from '../components/Background'
+import Logo from '../components/Logo'
+import Header from '../components/Header'
+import Button from '../components/Button'
+import TextInput from '../components/TextInput'
+import BackButton from '../components/BackButton'
 import Paragraph from '../components/Paragraph'
 
-import { theme } from '../core/theme.js'
-import { emailValidator } from '../helpers/emailValidator.js'
-import { passwordValidator } from '../helpers/passwordValidator.js'
+// 
+import { theme } from '../core/theme'
+import { emailValidator } from '../helpers/emailValidator'
+import { passwordValidator } from '../helpers/passwordValidator'
+
+// Style
+import Styles_Login from '../css/Styles.Login';
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' })
@@ -58,20 +63,20 @@ export default function LoginScreen({ navigation }) {
         errorText={password.error}
         secureTextEntry
       />
-      <View style={styles.forgotPassword}>
+      <View style={Styles_Login.forgotPassword}>
         <TouchableOpacity
           onPress={() => navigation.navigate('ResetPasswordScreen')}
         >
-          <Text style={styles.forgot}>Olvidaste tu contraseña.?</Text>
+          <Text style={Styles_Login.forgot}>Olvidaste tu contraseña.?</Text>
         </TouchableOpacity>
       </View>
       <Button mode="contained" onPress={onLoginPressed}>
         Inciar Session
       </Button>
-      <View style={styles.row}>
+      <View style={Styles_Login.row}>
         <Paragraph>No tienes una cuenta.? </Paragraph>
         <TouchableOpacity onPress={() => navigation.replace('RegisterScreen')}>
-          <Text style={styles.link}>Sign up</Text>
+          <Text style={styles.link}>Registrase</Text>
         </TouchableOpacity>
       </View>
     </Background>
