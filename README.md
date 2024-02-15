@@ -85,7 +85,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Built With
 [Expo GO](https://expo.dev/client)🔼is a development tool for creating experiences with gestures and interactive graphics, using JavaScript and [React Native](https://reactnative.dev/).⚛️
-![Product Name Screen Shot1][product-screenshot1]
+![Product Name Screen Shot][product-screenshot]
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
@@ -255,7 +255,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/freddr-ruiz-90932b202/
-[product-screenshot]: assets/expo.png
+[product-screenshot]: client/assets/expo.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
