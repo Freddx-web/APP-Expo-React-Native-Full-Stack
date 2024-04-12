@@ -29,6 +29,10 @@ app.use("/api/auth", AuthRouter);
 app.use("/api/tasks/", TasksRoutes);
 app.use("/api/products/", ProductRoutes);
 
+app.get("/", (req, res) => {
+  res.json({ message: "Great Day!"});
+});
+
 // 404
 app.use(function(req, res, next) {
   next(createError(404));
