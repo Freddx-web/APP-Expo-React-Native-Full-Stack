@@ -35,8 +35,6 @@
     <img src="https://img.icons8.com/color/144/000000/firebase.png"/>
   </a>
 
-
-
   <h3 align="center">APP Full Stack</h3>
 
   <p align="center">
